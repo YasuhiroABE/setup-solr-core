@@ -12,8 +12,8 @@
       ],
       "tokenizer": {
         "class": "solr.NGramTokenizerFactory",
-        "minGramSize": "3",
-        "maxGramSize": "3"
+        "minGramSize": "2",
+        "maxGramSize": "2"
       },
       "filter": [
         {
