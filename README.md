@@ -15,7 +15,8 @@ Before moving to the following examples, please setup the "solrbook" core.
 
 ## in case of the docker,
 $ sudo docker pull solr:8.7
-$ sudo docker exec -it solr:8.7 solr create_core -c solrbook
+$ sudo docker run -it --rm --name solr -p 8983:8983 solr:8.7
+$ sudo docker exec -it solr solr create_core -c solrbook
 ```
 
 ## How to setup the field-type
