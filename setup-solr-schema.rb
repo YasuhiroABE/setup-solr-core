@@ -12,7 +12,7 @@ def usage
     * delete
     * update
   files:
-    * list of file path
+    * list of file paths
 EOF
 end
 
@@ -33,7 +33,11 @@ KEY_LABEL = { "field" => { OPTDEL_LABEL => "delete-field",
                                 OPTUPD_LABEL => "replace-field-type" }
             }
 
-SOLR_URL = "http://localhost:8983/solr/solrbook/schema"
+if ENV.has_key?("SOLR_URL")
+  SOLR_URL = ENV['SOLR_URL']
+else
+  SOLR_URL = "http://localhost:8983/solr/solrbook/schema"
+end
 
 operation = nil
 if ARGV.length > 0 and OPERATIONS.include?(ARGV[0])
