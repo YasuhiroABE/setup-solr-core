@@ -1,2 +1,5 @@
 *~
 /core*
+/.bundle
+/lib/ruby
+Gemfile.lock
