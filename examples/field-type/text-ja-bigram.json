@@ -1,0 +1,26 @@
+{
+  "field-type": {
+    "name": "text_ja_bigram",
+    "class": "solr.TextField",
+    "autoGeneratePhraseQueries": "true",
+    "positionIncrementGap": "100",
+    "analyzer": {
+      "charFilter": [
+        {
+          "class": "solr.ICUNormalizer2CharFilterFactory"
+        }
+      ],
+      "tokenizer": {
+        "class": "solr.NGramTokenizerFactory",
+        "minGramSize": "3",
+        "maxGramSize": "3"
+      },
+      "filter": [
+        {
+          "class": "solr.CJKWidthFilterFactory",
+          "class": "solr.LowerCaseFilterFactory"
+        }
+      ]
+    }
+  }
+}

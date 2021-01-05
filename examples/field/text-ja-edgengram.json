@@ -1,0 +1,10 @@
+{
+  "field" : {
+    "name" : "content_edgengram",
+    "type" : "text_ja_edgengram",
+    "multiValued" : "true",
+    "indexed" : "true",
+    "required" : "true",
+    "stored" : "true"
+  }
+}
