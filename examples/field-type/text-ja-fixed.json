@@ -1,25 +1,29 @@
 {
-  "field-type": {
-    "name": "text_ja_fixed",
-    "class": "solr.TextField",
-    "autoGeneratePhraseQueries": "true",
-    "positionIncrementGap": "100",
-    "analyzer": {
-      "charFilter": [
-        {
-          "class": "solr.ICUNormalizer2CharFilterFactory"
-        }
-      ],
-      "tokenizer": {
-        "class": "solr.JapaneseTokenizerFactory"
-      },
-      "filter": [
-        {
-          "class": "solr.CJKWidthFilterFactory",
-          "class": "solr.JapaneseKatakanaStemFilterFactory",
-          "class": "solr.LowerCaseFilterFactory"
-        }
-      ]
+    "field-type": {
+	"name": "text_ja_fixed",
+	"class": "solr.TextField",
+	"autoGeneratePhraseQueries": "true",
+	"positionIncrementGap": "100",
+	"analyzer": {
+	    "charFilter": [
+		{
+		    "class": "solr.ICUNormalizer2CharFilterFactory"
+		}
+	    ],
+	    "tokenizer": {
+		"class": "solr.JapaneseTokenizerFactory"
+	    },
+	    "filters": [
+		{
+		    "class": "solr.CJKWidthFilterFactory"
+		},
+		{
+		    "class": "solr.JapaneseKatakanaStemFilterFactory"
+		},
+		{
+		    "class": "solr.LowerCaseFilterFactory"
+		}
+	    ]
+	}
     }
-  }
 }

@@ -1,5 +1,6 @@
 *~
 /core*
+/collection*
 /.bundle
 /lib/ruby
 Gemfile.lock
