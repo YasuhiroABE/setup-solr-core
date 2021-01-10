@@ -42,9 +42,11 @@ prepare an arbitrary definition file likes as the examples/field-type/text-ja-ed
         "minGramSize": "1",
         "maxGramSize": "1"
       },
-      "filter": [
+      "filters": [
         {
-          "class": "solr.CJKWidthFilterFactory",
+          "class": "solr.CJKWidthFilterFactory"
+        },
+        {
           "class": "solr.LowerCaseFilterFactory"
         }
       ]
@@ -92,4 +94,3 @@ example-update:
 	env SOLR_URL=$(SOLR_URL) \
 	$(SCRIPT_FILEPATH) update field-type/*.json field/*.json
 ```
-
