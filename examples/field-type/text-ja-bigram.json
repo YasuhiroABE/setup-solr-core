@@ -5,11 +5,9 @@
 	"autoGeneratePhraseQueries": "true",
 	"positionIncrementGap": "100",
 	"analyzer": {
-	    "charFilter": [
-		{
-		    "class": "solr.ICUNormalizer2CharFilterFactory"
-		}
-	    ],
+	    "charFilter": {
+		"class": "solr.ICUNormalizer2CharFilterFactory"
+	    },
 	    "tokenizer": {
 		"class": "solr.NGramTokenizerFactory",
 		"minGramSize": "2",
@@ -17,9 +15,7 @@
 	    },
 	    "filters": [
 		{
-		    "class": "solr.CJKWidthFilterFactory"
-		},
-		{
+		    "class": "solr.CJKWidthFilterFactory",
 		    "class": "solr.LowerCaseFilterFactory"
 		}
 	    ]

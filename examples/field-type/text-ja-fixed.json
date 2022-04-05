@@ -5,22 +5,16 @@
 	"autoGeneratePhraseQueries": "true",
 	"positionIncrementGap": "100",
 	"analyzer": {
-	    "charFilter": [
-		{
-		    "class": "solr.ICUNormalizer2CharFilterFactory"
-		}
-	    ],
+	    "charFilter": {
+		"class": "solr.ICUNormalizer2CharFilterFactory"
+	    },
 	    "tokenizer": {
 		"class": "solr.JapaneseTokenizerFactory"
 	    },
 	    "filters": [
 		{
-		    "class": "solr.CJKWidthFilterFactory"
-		},
-		{
-		    "class": "solr.JapaneseKatakanaStemFilterFactory"
-		},
-		{
+		    "class": "solr.CJKWidthFilterFactory",
+		    "class": "solr.JapaneseKatakanaStemFilterFactory",
 		    "class": "solr.LowerCaseFilterFactory"
 		}
 	    ]
